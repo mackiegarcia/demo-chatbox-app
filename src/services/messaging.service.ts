@@ -9,7 +9,7 @@ import * as socketIo from 'socket.io-client';
 export class MessagingService {
   private socket;
   constructor(private utilSvc: UtilityService) {
-    const chatServer = `http://${window.location.hostname}:${environment.chatServerPort}`;
+    const chatServer = environment.apiServerUrl;
     this.socket = socketIo(chatServer);
   }
 
