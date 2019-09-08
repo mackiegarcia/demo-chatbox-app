@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   apiServerUrl: 'https://demo-chatbox-api.herokuapp.com',
   chatServerPort: '4003',
+  appServerPort: '4200'
 };
 
 /*
