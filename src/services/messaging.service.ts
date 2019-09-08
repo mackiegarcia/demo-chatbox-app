@@ -19,8 +19,11 @@ export class MessagingService {
 
   onMessage(messages): void  {
     this.socket.on('chat_message', (msg) => {
-      msg.isLoggedInUser = this.utilSvc.isLoggedInUser(msg.userId);
+      const isLoggedInUser = this.utilSvc.isLoggedInUser(msg.userId);
+      msg.isLoggedInUser = isLoggedInUser;
+      msg.username = isLoggedInUser ? 'You' : msg.username;
       messages.push(msg);
+      this.utilSvc.displayLatestMsg();
     });
   }
 }

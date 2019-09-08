@@ -30,6 +30,7 @@ export class ChatboxComponent implements OnInit {
     this.msgSvc.getAllMessages().subscribe(result => {
       this.chatMessages = this.parseChatMessages(result.data);
       this.chatSvc.onMessage(this.chatMessages);
+      this.utilSvc.displayLatestMsg();
     });
   }
 
@@ -50,7 +51,6 @@ export class ChatboxComponent implements OnInit {
           isLoggedInUser: null
         };
         this.chatSvc.send(chat);
-        this.utilSvc.scollDownWindow();
       }
     });
   }
@@ -62,12 +62,13 @@ export class ChatboxComponent implements OnInit {
       if (!chatOwner) {
         chatOwner = 'unknown';
       }
+      const isLoggedInUser =  this.utilSvc.isLoggedInUser(msg.userId);
       const chat: ChatMessage = {
         id: msg.id,
         message: msg.msg,
-        username: chatOwner,
+        username: isLoggedInUser ? 'You' : chatOwner,
         userId: msg.userId,
-        isLoggedInUser: this.utilSvc.isLoggedInUser(msg.userId)
+        isLoggedInUser
       };
       chats.push(chat);
     });

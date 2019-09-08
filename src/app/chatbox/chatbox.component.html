@@ -9,20 +9,24 @@
                 value="Log out"
                 (click)="logout()">
         </header>
-        <main class="chatbox-main">
+        <main id="chatbox-main">
             <div class="chatbox-messages">
                 <div *ngFor="let msg of chatMessages" 
-                    class="chatbox-message"
-                    [ngClass]="{'logged-user': msg.isLoggedInUser}">
-                    <div class="chatbox-message-text"
+                    class="chatbox-message">
+                    <div class="chatbox-message-container"
                         [ngClass]="{'logged-user': msg.isLoggedInUser}">
-                        {{ msg.message }}
-                        <div [ngClass]="{
-                            'arrow-right': msg.isLoggedInUser, 
-                            'arrow-left': !msg.isLoggedInUser}">
+                        <div class="arrow-left"
+                            *ngIf="!msg.isLoggedInUser">
+                        </div>
+                        <div class="chatbox-message__text">
+                            {{ msg.message }}
+                        </div>
+                        <div class="arrow-right"
+                            *ngIf="msg.isLoggedInUser">
                         </div>
                     </div>
-                    <div class="chatbox-message-owner">
+                    <div class="chatbox-message-owner-container"
+                        [ngClass]="{'logged-user': msg.isLoggedInUser}">
                         {{ msg.username }}
                     </div>
                 </div>

@@ -41,10 +41,13 @@ export class UtilityService {
     return userId.toString() === sessionStorage.getItem('loggedUserId');
   }
 
-  scollDownWindow(): void {
+  displayLatestMsg(): void {
     setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 10);
+      const element = document.getElementById('chatbox-main');
+      if (element.clientHeight < element.scrollHeight) {
+        element.scrollTop = element.scrollHeight;
+      }
+    }, 5);
   }
 }
 

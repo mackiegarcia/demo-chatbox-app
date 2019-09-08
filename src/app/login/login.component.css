@@ -28,7 +28,7 @@
 
 .login-input-field {
     margin-top: 45px;
-    width: 560px;
+    width: calc(100% - 40px);
     height: 80px;
     font-size: 2em;
     padding-right: 20px;
@@ -40,7 +40,7 @@
 
 .login-input-btn {
     margin-top: 45px;
-    width: 600px;
+    width: calc(100% - 6px);
     height: 80px;
     font-size: 2em;
     background-color: #88e306;
