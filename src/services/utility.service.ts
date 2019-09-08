@@ -18,6 +18,7 @@ export class UtilityService {
         users.forEach(user => usrs[user.id] = user.username);
         sessionStorage.setItem('users', JSON.stringify(usrs));
       }
+      location.href = '/chatbox';
     });
   }
 

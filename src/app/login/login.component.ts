@@ -51,14 +51,12 @@ export class LoginComponent implements OnInit {
       this.accountSvc.loginUser(this.username, this.password).subscribe(result => {
         if (result.status === StatusCode.OK) {
           this.utilSvc.createSession(result.data.id, result.data.username);
-          location.href = '/chatbox';
         } else if (result.status === StatusCode.UNAUTHORIZED) {
           // username has no record and so create record
           window.alert(`Username ${this.username} does not exist. Creating account with the given username and password.`);
           // tslint:disable-next-line: no-shadowed-variable
           this.accountSvc.addUser(this.username, this.password).subscribe(result => {
             this.utilSvc.createSession(result.data.id,  result.data.username);
-            location.href = '/chatbox';
           });
         } else {
           window.alert('Password incorrect!');

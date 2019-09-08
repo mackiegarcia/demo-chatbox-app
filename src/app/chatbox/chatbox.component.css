@@ -89,6 +89,7 @@
     float: right;
     margin-top: 20px;
     margin-right: 20px;
+    cursor:pointer;
 }
 
 .chatbox-input-btn.logout {
