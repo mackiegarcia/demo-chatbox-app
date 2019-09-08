@@ -1,0 +1,72 @@
+.login-container {
+    width: 100%;
+}
+
+.login-content {
+    margin: auto;
+    width: 640px;
+    font-family: "Arial", Monospace, Sans-serif;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ccd6dd;
+}
+
+.login-header {
+    height: 97px;
+    border-bottom: 2px solid #ccd6dd;
+    text-align: center;
+}
+
+.login-header__text{
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.login-main {
+    margin: 15px 20px;
+}
+
+.login-input-field {
+    margin-top: 45px;
+    width: 560px;
+    height: 80px;
+    font-size: 2em;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f5f8fa;
+    border: none;
+    color: #647787;
+}
+
+.login-input-btn {
+    margin-top: 45px;
+    width: 600px;
+    height: 80px;
+    font-size: 2em;
+    background-color: #88e306;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.login-footer {
+    margin: 0px 20px;
+    min-height: 597px;
+}
+
+.login-footer__terms-text {
+    text-align: left;
+    margin-top: 45px;
+    color: #647787;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 40px;
+}
+
+#username-invalid::-webkit-input-placeholder,  #password-invalid::-webkit-input-placeholder { 
+    color: red; 
+}
+
+#username-valid::-webkit-input-placeholder, #password-valid::-webkit-input-placeholder { 
+    color: #647787; 
+}

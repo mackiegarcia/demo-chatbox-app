@@ -1,0 +1,37 @@
+<div class="login-container">
+    <div class="login-content">
+        <header class="login-header">
+            <h1 class="login-header__text">
+                Chat app
+            </h1>
+        </header>
+        <main class="login-main">
+            <input type="text" 
+                class="login-input-field" 
+                [(ngModel)]="username"
+                id="{{ userNameInputId }}"
+                placeholder="{{ userNamePlaceHolder }}"
+                (click)="cleanUserNameField()">
+            <input 
+                type="password" 
+                class="login-input-field" 
+                id="{{ passwordInputId }}"
+                [(ngModel)]="password"
+                placeholder="{{ passwordPlaceHolder }}"
+                (click)="cleanPasswordField()">
+            <input type="button" 
+                class="login-input-btn" 
+                value="Sign up / Log In" 
+                (click)="login()">
+        </main>
+        <footer class="login-footer">
+            <div class="login-footer__terms-text">
+                By signing up, you agree to the Terms of 
+                Service and Privacy Policy, including Cookie 
+                Use. Others will be able to find you by 
+                searching for your email address or phone 
+                number when provided.
+            </div>
+        </footer>
+    </div>
+</div>

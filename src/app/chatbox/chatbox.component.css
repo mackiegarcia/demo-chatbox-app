@@ -1,0 +1,137 @@
+.chatbox-container {
+    width: 100%;
+}
+
+.chatbox-content {
+    margin: auto;
+    width: 640px;
+    font-family: "Arial", Monospace, Sans-serif;
+    background-color: #ffffff;
+}
+
+.chatbox-header {
+    height: 97px;
+    border-bottom: 2px solid #ccd6dd;
+    text-align: center;
+}
+
+.chatbox-header__text{
+    margin: 0px;
+    padding-top: 30px;
+}
+
+.chatbox-main {
+    margin: 15px 20px;
+    min-height: 860px;
+    width: 620px;
+}
+
+.chatbox-messages {
+    width: 600px;
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+.chatbox-message {
+    margin: 0px 0px 40px 0px;
+}
+
+.chatbox-message-text {
+    max-width: 380px;
+    background-color: #88e306;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.chatbox-message.logged-user {
+    text-align: right;
+}
+
+.chatbox-message-text.logged-user {
+    margin-left: auto; 
+    margin-right: 0px;
+}
+
+.chatbox-message-owner {
+    margin-top: 10px;
+    color: #647787;
+}
+
+.chatbox-message-text.not-logged-user .chatbox-message.not-logged-user {
+    text-align: left;
+    float: left;
+}
+
+.chatbox-input-field {
+    margin: 20px 10px 20px 20px;
+    width: 430px;
+    height: 80px;
+    font-size: 2em;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f5f8fa;
+    border: none;
+    color: #647787;
+}
+
+.chatbox-input-btn {
+    padding: 0px 20px;
+    height: 60px;
+    font-size: 2em;
+    background-color: #666666;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.chatbox-input-btn.logout {
+    top: -70px;
+}
+
+.chatbox-input-btn.send {
+    top: 20px;
+}
+
+.chatbox-footer {
+    height: 120px;
+    border-top: 2px solid #ccd6dd;
+    border-bottom: 2px solid #ccd6dd;
+}
+
+.chatbox__terms-text {
+    text-align: left;
+    margin-top: 45px;
+    color: #647787;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 40px;
+}
+
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:15px solid #88e306;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -35px;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #88e306;
+    margin-top: -15px;
+    margin-left: 400px;
+    position: absolute;
+}

@@ -1,0 +1,42 @@
+<div class="chatbox-container">
+    <div class="chatbox-content">
+        <header class="chatbox-header">
+            <h1 class="chatbox-header__text">
+                Chat app
+            </h1>
+            <input type="button" 
+                class="chatbox-input-btn logout" 
+                value="Log out"
+                (click)="logout()">
+        </header>
+        <main class="chatbox-main">
+            <div class="chatbox-messages">
+                <div *ngFor="let msg of chatMessages" 
+                    class="chatbox-message"
+                    [ngClass]="{'logged-user': msg.isLoggedInUser}">
+                    <div class="chatbox-message-text"
+                        [ngClass]="{'logged-user': msg.isLoggedInUser}">
+                        {{ msg.message }}
+                        <div [ngClass]="{
+                            'arrow-right': msg.isLoggedInUser, 
+                            'arrow-left': !msg.isLoggedInUser}">
+                        </div>
+                    </div>
+                    <div class="chatbox-message-owner">
+                        {{ msg.username }}
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="chatbox-footer">
+            <input type="text" 
+                class="chatbox-input-field"
+                [(ngModel)]="chatMessage"
+                placeholder="Start a message">
+            <input type="button" 
+                class="chatbox-input-btn send" 
+                value="send"
+                (click)="sendMessage()">
+        </footer>
+    </div>
+</div>
