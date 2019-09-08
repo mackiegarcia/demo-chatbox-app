@@ -1,13 +1,14 @@
 .login-container {
     width: 100%;
+    height: 100%;
 }
 
 .login-content {
-    margin: auto;
-    width: 640px;
-    font-family: "Arial", Monospace, Sans-serif;
     background-color: #ffffff;
-    border-bottom: 2px solid #ccd6dd;
+    margin: auto;
+    max-width: 640px;
+    font-family: "Arial", Monospace, Sans-serif;
+    height: 100%;
 }
 
 .login-header {
@@ -22,7 +23,7 @@
 }
 
 .login-main {
-    margin: 15px 20px;
+    padding: 15px 20px;
 }
 
 .login-input-field {
@@ -47,16 +48,17 @@
     border-radius: 10px;
     font-weight: bold;
     color: #ffffff;
+    cursor:pointer;
 }
 
 .login-footer {
-    margin: 0px 20px;
-    min-height: 597px;
+    padding: 0px 20px;
+    max-height: 597px;
 }
 
 .login-footer__terms-text {
     text-align: left;
-    margin-top: 45px;
+    padding-top: 45px;
     color: #647787;
     font-weight: bold;
     font-size: 27px;

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+body, html {
     background-color: #E8E8E8;
+    height: 100%;
+    margin: 0px;
 }
