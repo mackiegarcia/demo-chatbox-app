@@ -1,11 +1,11 @@
 <div class="chatbox-container">
     <div class="chatbox-content">
         <header class="chatbox-header">
-            <h1 class="chatbox-header__text">
+            <div class="chatbox-header__text">
                 Chat app
-            </h1>
+            </div>
             <input type="button" 
-                class="chatbox-input-btn logout" 
+                class="chatbox-box__logout-btn" 
                 value="Log out"
                 (click)="logout()">
         </header>
@@ -38,7 +38,7 @@
                 [(ngModel)]="chatMessage"
                 placeholder="Start a message">
             <input type="button" 
-                class="chatbox-input-btn send" 
+                class="chatbox-box__send-btn" 
                 value="send"
                 (click)="sendMessage()">
         </footer>

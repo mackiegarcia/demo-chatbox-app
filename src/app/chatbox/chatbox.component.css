@@ -17,18 +17,21 @@
     text-align: center;
 }
 
-.chatbox-header__btn-container {
-    position: absolute;
-}
-
 .chatbox-header__text{
     margin: 0px;
     padding-top: 30px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 #chatbox-main {
-    margin: 15px 20px;
-    width: 620px;
+    margin: 40px 0px 40px 15px;
+    max-width: 620px;
     height: calc(100% - 282px);
     overflow-y: auto;
 }
@@ -72,8 +75,8 @@
 }
 
 .chatbox-input-field {
-    margin: 20px 10px 20px 20px;
-    width: 430px;
+    width: calc(100% - 170px);
+    /* width: 70%; */
     height: 80px;
     font-size: 2em;
     padding-right: 20px;
@@ -81,26 +84,40 @@
     background-color: #f5f8fa;
     border: none;
     color: #647787;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px
 }
 
-.chatbox-input-btn {
-    padding: 0px 20px;
-    height: 60px;
-    font-size: 2em;
+.chatbox-box__logout-btn {
+    height: 40px;
+    font-size: 18px;
     background-color: #666666;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     color: #ffffff;
-    position: relative;
+    cursor: pointer;
     float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-    cursor:pointer;
+    margin-top: -65px;
+    margin-right: 15px; 
+    padding: 10px 20px;
 }
 
-.chatbox-input-btn.logout {
-    top: -70px;
+.chatbox-box__send-btn {
+    height: 80px;
+    width: 85px;
+    font-size: 18px;
+    background-color: #666666;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 10px 20px;
 }
 
 .chatbox-input-btn.send {
@@ -112,8 +129,6 @@
     height: 120px;
     border-top: 2px solid #ccd6dd;
     border-bottom: 2px solid #ccd6dd;
-    position: absolute;
-    bottom: 0px;
 }
 
 .chatbox__terms-text {
